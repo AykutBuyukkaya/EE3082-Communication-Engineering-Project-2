@@ -28,32 +28,30 @@ received noisy symbol string will be demodulated and converted to binary
 symbols. After that, a comparison will be made to check the error rate
 between received and transmitted binary symbols.
 
-1.  
+Question 1)
+===========
 
-    Question 1)
-    ===========
-
-    1.  a. 
-        ---
+a. 
+---
 
 In phase shift modulation technique (PSK), transmitted signal is mapped
 by incoming signal to change it phase. This means we simply shifting the
 phase of output singal during tranmission.
 
-![](media/image1.jpeg){width="3.0555555555555554in"
-height="2.727777777777778in"}
+![](media/image1.jpeg)
 
 Figure 1: 4-ary PSK tranmission symbols. Each data has different phase
 on tranmission
 
-![](media/image2.png){width="6.6930555555555555in"
-height="3.7625in"}Figıre 2 : Simulink model for PSK transmission.
+![](media/image2.png)
+Figure 2 : Simulink model for PSK transmission.
 
 The probability for a symbol to be corrupted on the channel is dependent
 to channel noise and signal power. As can be seen in given graph,
 increasing bit energy will significantly reduce error probability for a
-given system. ![](media/image3.png){width="6.6930555555555555in"
-height="3.5493055555555557in"}
+given system.
+
+![](media/image3.png)
 
 Figure 3 : Bit error rates for different (Eb/N0) values for 16-ary PSK
 system.
@@ -70,25 +68,21 @@ symbol, we can reduce bandwidth. However, this process will also
 increase the probability of the symbol becoming corrupted during
 transmission.
 
-![](media/image4.png){width="6.6930555555555555in"
-height="3.5166666666666666in"}Figure 4 : Comparison of bit error
+![](media/image4.png)
+
+Figure 4 : Comparison of bit error
 probailities for 4-ary, 8-ary and 16-ary PSK systems.
 
 As can be seen from the given graph, increasing the number of bits
 required to form a single transmission symbol will also increase the bit
 error probability.
 
-+-----------+-----------+-----------+------------------------+
-| M-ary PSK | Data Rate | Bandwidth | BER(Binary Error Rate) |
-|           |           |           |                        |
-|           |           |           | (For Eb/No = 5dB)      |
-+-----------+-----------+-----------+------------------------+
+
+| M-ary PSK | Data Rate | Bandwidth | BER(Binary Error Rate) (For Eb/No = 5dB)  |
+|-----------|-----------|-----------|------------------------|
 | 4-ary     | 2 MBps    | 1 MHz     | 0.00597                |
-+-----------+-----------+-----------+------------------------+
 | 8-ary     | 3 MBps    | 1 MHz     | 0.03187                |
-+-----------+-----------+-----------+------------------------+
 | 16-ary    | 4 MBps    | 1 MHz     | 0.08295                |
-+-----------+-----------+-----------+------------------------+
 
 As can be seen from the given table, increasing the M value will also
 increase the number of bits transmitted over a channel with the same
@@ -96,56 +90,50 @@ bandwidth but It'll also increase the probability of a bit being
 corrupted during transmission. So M-ary grouping is a tradeoff between
 increased data rate and increased bit error during transmission.
 
-1.  Question 2)
-    -----------
+Question 2)
+-----------
 
-    1.  ### a.
+a.
+---
 
 On QAM modulation we again change the phase of the outgoing signal
 according the coordinate system positions. And for PAM modulation, we
 are sending integer values for grouped binary symbols
 
-![](media/image5.png){width="3.3958333333333335in"
-height="3.0520833333333335in"}
+![](media/image5.png)
 
 Figure 5 : 4-ary QAM modulation values.
 
-![](media/image6.png){width="6.6930555555555555in"
-height="3.7625in"}Figure 6 : Simulink Scheme for QAM modulation.
+![](media/image6.png)
 
-![](media/image7.png){width="6.6930555555555555in" height="3.7625in"}
+Figure 6 : Simulink Scheme for QAM modulation.
+
+![](media/image7.png)
 
 Figure 7 : Simulink scheme for PAM modulation.
 
 In this question, we tried to analyze the difference between QAM and PAM
 modulations.
 
-![](media/image8.png){width="6.6930555555555555in"
-height="3.3243055555555556in"}Figure 8 : Bit Error vs Eb/No graph for
-QAM(4-ary and 16-ary) and PAM(binary and 16)
+![](media/image8.png)
 
-+-----------------------+-----------+----------+------------------------+
-| M-ary Modulation Type | Data Rate | Banwidth | BER(Binary Error Rate) |
-|                       |           |          |                        |
-|                       |           |          | (For Eb/No = 5db)      |
-+-----------------------+-----------+----------+------------------------+
+Figure 8 : Bit Error vs Eb/No graph for QAM(4-ary and 16-ary) and PAM(binary and 16)
+
+| M-ary Modulation Type | Data Rate | Banwidth | BER(Binary Error Rate)(For Eb/No = 5db)    |
+|-----------------------|-----------|----------|------------------------|
 | Binary PAM            | 1 MBps    | 1 MHz    | 0.005989               |
-+-----------------------+-----------+----------+------------------------+
 | QAM                   | 2 MBps    | 1 MHz    | 0.005989               |
-+-----------------------+-----------+----------+------------------------+
 | 16 -ary PAM           | 4 MBps    | 1 MHz    | 0.1593                 |
-+-----------------------+-----------+----------+------------------------+
 | 16-ary QAM            | 4 MBps    | 1 MHz    | 0.04194                |
-+-----------------------+-----------+----------+------------------------+
 
 From the table we can say that QAM is superior to PAM modulation for
 higher M values. But for lower values they are almost identical. But for
 higher M values QAM has much more lower error rate than PAM modulation.
 
 ### b.
+---
 
-![](media/image9.png){width="6.6930555555555555in"
-height="3.2534722222222223in"}
+![](media/image9.png)
 
 Figure 9 : PSK vs QAM modulation comparison for 16-ary grouping.
 
@@ -160,15 +148,16 @@ For this question, we used Frequency Shift Keying modulation to transmit
 and receive data over noisy channel. FSK uses frequency shfiting over a
 sinusodial to transmit data.
 
-1.  ### 
+### a.
+---
 
-    ### a.
+![](media/image10.png)
 
-![](media/image10.png){width="6.6930555555555555in"
-height="1.8923611111111112in"}Figure 10 : FSK modulation Simulink Model.
+Figure 10 : FSK modulation Simulink Model.
 
-![](media/image11.png){width="6.6930555555555555in"
-height="3.2368055555555557in"}Figure 11 : FSK modulations for binary,
+![](media/image11.png)
+
+Figure 11 : FSK modulations for binary,
 4-ary, 8-ary and 16-ary over 12 dB Eb/NO noisy channel.
 
 From the given graph, we can see that there are some missing values.
@@ -188,25 +177,25 @@ BFSK = 2 \* 1k = 2KHz
 
 16-ary FSK = 16 \* 1k = 16Khz
 
-![](media/image12.png){width="6.6930555555555555in"
-height="3.0520833333333335in"}Figure 12 : BFSK spectrum.
+![](media/image12.png)
 
-![](media/image13.png){width="6.6930555555555555in"
-height="3.0444444444444443in"}Figure 13 : QFSK spectrum.
+Figure 12 : BFSK spectrum.
 
-![](media/image14.png){width="6.6930555555555555in"
-height="3.046527777777778in"}
+![](media/image13.png)
+
+Figure 13 : QFSK spectrum.
+
+![](media/image14.png)
 
 Figure 14 : 8FSK spectrum.
 
-![](media/image15.png){width="6.6930555555555555in"
-height="3.0395833333333333in"} Figure 15 : 16FSK spectrum.
+![](media/image15.png)
+Figure 15 : 16FSK spectrum.
 
 ### b.
 
-![](media/image16.png){width="6.6930555555555555in"
-height="3.21875in"}Figure 16 : FSK modulation BER comparison for varying
-Eb/NO and M(2, 4, 8, 16) values.
+![](media/image16.png)
+Figure 16 : FSK modulation BER comparison for varying Eb/NO and M(2, 4, 8, 16) values.
 
 For this part of the problem, we analyzed FSK modulation technique for
 different M values. The results are similar with the other techniques.
@@ -215,19 +204,14 @@ period or in short Data rate will increase but chance of the transmitted
 signal to be corrupted during transmission over noisy channel will also
 increase as well.
 
-+------------+-----------+-----------+------------------------+
-| M-ary FSK  | Bandwidth | Data Rate | BER(Binary Error Rate) |
-|            |           |           |                        |
-|            |           |           | (For Eb/No = 5db)      |
-+------------+-----------+-----------+------------------------+
+
+| M-ary FSK  | Bandwidth | Data Rate | BER(Binary Error Rate) (For Eb/No = 5db) |
+|------------|-----------|-----------|------------------------|
 | Binary FSK | 2 KHz     | 1 KBps    | 0.0048                 |
-+------------+-----------+-----------+------------------------+
 | 4-ary FSK  | 4 KHZ     | 2 KBps    | 0.0137                 |
-+------------+-----------+-----------+------------------------+
 | 8-ary FSK  | 8 KHz     | 3 KBps    | 0.0358                 |
-+------------+-----------+-----------+------------------------+
 | 16-ary FSK | 16 KHZ    | 4 KBps    | 0.1052                 |
-+------------+-----------+-----------+------------------------+
+
 
 As can be seen on graph, data rate and BER(Binary error rate) are
 complement of each other. Increasing M(which will increase data rate)
